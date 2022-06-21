@@ -1,11 +1,11 @@
-package com.xy124;
+package com.xy124.list;
 
 import com.xy124.list.CustomArrayList;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
+public class ArrayListMain {
     public static void main(String[] args) {
 
         CustomArrayList customArrayList = new CustomArrayList(2);
