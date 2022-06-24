@@ -1,4 +1,4 @@
-package com.xy124.templatecallback.callculate;
+package com.xy124.templatecallback.calculate;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -24,12 +24,24 @@ class CalculatorTest {
     }
 
     @Test
-    void calcSumWithTemplate() throws IOException {
+    void calcSumWithNormalTemplate() throws IOException {
         assertThat(calculator.calcSumWithTemplate(this.numFilePath)).isEqualTo(10);
     }
 
     @Test
-    void 곱연산_콜백_테스트() throws IOException {
+    void calcMultiWithNormalTemplate() throws IOException {
         assertThat(calculator.calcMultiWithTemplate(this.numFilePath)).isEqualTo(25);
     }
+
+    @Test
+    void lineCallback_합연산_테스트() throws IOException {
+        assertThat(calculator.calcSumWithLineCallback(this.numFilePath)).isEqualTo(10);
+    }
+
+    @Test
+    void lineCallback_곱연산_테스트() throws IOException {
+        assertThat(calculator.calcMultiWithLineCallback(this.numFilePath)).isEqualTo(25);
+    }
+
+
 }
